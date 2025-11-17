@@ -1,0 +1,158 @@
+/* montserrat-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/montserrat-v31-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/montserrat-v31-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* fraunces-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/fraunces-v38-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+:root{
+    --color-green-500: hsl(158, 36%, 37%);
+    --color-green-700: hsl(158, 42%, 18%);
+    --color-black: hsl(212, 21%, 14%);
+    --color-grey: hsl(228, 12%, 48%);
+    --color-cream: hsl(30, 38%, 92%);
+    --color-white: hsl(0, 0%, 100%);
+    --font-heading: 'Fraunces', Arial, Helvetica, sans-serif;
+    --font-body: 'Montserrat', Arial, Helvetica, sans-serif;
+    --fw-regular: 500;
+    --fw-bold: 700; 
+}
+*,
+::before,
+::after{
+  
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+    line-height: 1.7;
+    color: var(--color-grey);
+    background-color: var(--color-cream);
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    margin: 1rem;
+}
+
+h1, h2, h3{
+    margin: 0;
+    font-family: var(--font-heading);
+}
+
+p{
+    margin: 0;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+     
+}
+
+.product{
+    --content-padding: 1.6rem;
+    --content-spacing: 1rem;
+    display: grid;
+    
+    max-width: 600px;
+    border-radius: 15px;
+    background-color: var(--color-white);
+    overflow: hidden;
+}
+ 
+
+@media (min-width : 37.5em) {
+    .product{
+        --content-padding: 2rem;
+       --content-spacing: 0;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+
+}
+
+.product__content{
+    display: grid;
+    gap: var(--content-spacing);
+    padding: var(--content-padding);
+
+}
+ 
+.product__category{
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;   
+}
+ 
+.product__title{
+    font-size: 2rem;
+    font-family: var(--font-heading);
+    line-height: 1;
+    color: var(--color-black);
+}
+
+.product__price{
+    font-size: 2rem;
+    font-family: var(--font-heading);
+    color: var(--color-green-500);
+}
+
+.product__original-price{
+      text-decoration: line-through;
+}
+ 
+
+.button{
+    font-size: .95rem;
+    font-weight: var(--fw-bold);
+    background-color: var(--color-green-500);
+    color: var(--color-white);
+    display: inline-flex;
+    gap: .7rem;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+ 
+.button:hover{
+     background-color: var(--color-green-700);
+    transition: background 150ms ease-in-out;
+}
+
+.button[data-icon="shopping-cart"]::before{
+    content: "";
+    width: 15px;
+    height: 16px;
+    background-image: url("images/icon-cart.svg");
+}
+
+.flex-group{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
