@@ -14,6 +14,7 @@
 
     <title>Frontend Mentor | Article preview component</title>
     <link rel="stylesheet" href="./style.css" />
+    <script defer src="./main.js"></script>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -47,7 +48,7 @@
             felt slightly bare and uninviting. I've got some simple tips to help
             you make any room feel complete.
           </p>
-          <div class="article-preview__avatar">
+          <div class="article-preview__avatar" id="avatar">
             <div class="article-preview-open-share">
               <div class="open-sare__icons">
                 <p>Share</p>
@@ -78,12 +79,15 @@
                   </li>
                 </ul>
               </div>
-              <img
-                src="./images/icon-share.svg"
-                alt=""
-                width="15"
-                height="13"
-              />
+              <button class="share-icon panel-share-icon">
+                <img
+                  class="desktop-hidden"
+                  src="./images/icon-share.svg"
+                  alt=""
+                  width="15"
+                  height="13"
+                />
+              </button>
             </div>
             <div class="article-preview__avatar-content">
               <img
@@ -100,14 +104,15 @@
               </div>
             </div>
 
-            <div class="article-preview-share-icon">
+            <button class="share-icon article-preview-share-icon">
               <img
+                class="article-preview-share-icon-image"
                 src="./images/icon-share.svg"
                 alt=""
                 width="15"
                 height="13"
               />
-            </div>
+            </button>
           </div>
         </div>
       </div>
