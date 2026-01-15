@@ -31,10 +31,12 @@ body {
 }
 
 body {
+  width: 100%;
+  max-width: 375px;
   display: grid;
   place-items: center;
   min-height: 100vh;
-  background-color: var(--color-neutral-Blue-700);
+  /* background-color: var(--color-neutral-Blue-700); */
   font-family: var(--ff);
   font-size: var(--fs);
 }
@@ -67,7 +69,6 @@ ul {
 }
 
 .sign-up-form {
-  width: 375px;
   background-color: var(--color-neutral-White);
   display: grid;
   place-items: center;
@@ -85,25 +86,29 @@ ul {
 
 .sign-up-form__text {
   padding-inline: 25px;
-  padding-block: 30px;
+  padding-block: 35px 40px;
   color: var(--color-neutral-Blue-800);
 }
 
 .sign-up-form__text h2 {
-  font-size: 2.5rem;
+  font-size: 2.55rem;
 }
 
 .sign-up-form__text > p {
-  padding-block: 20px;
+  padding-block: 16px;
+  line-height: 1.6;
 }
 .sign-up-form__text ul {
+  padding-block-end: 37px;
 }
 .sign-up-form__text ul li {
   display: flex;
   align-items: flex-start;
-  gap: 15px;
-  padding-block: 5px;
+  gap: 17px;
+  padding-block: 7px;
   line-height: 1.5;
+  font-size: 15px;
+  font-weight: var(--fw-normal);
 }
 
 .sign-up-form__text ul li::before {
@@ -113,4 +118,39 @@ ul {
   width: 21px;
   height: 21px;
   /* border-radius: 50%; */
+}
+
+label,
+input,
+button {
+  display: block;
+  width: 100%;
+  font-family: var(--ff);
+}
+
+label {
+  font-weight: var(--fw-bold);
+  font-size: 11px;
+  padding-block-end: 10px;
+}
+
+#email {
+  padding-block: 20px;
+  padding-inline-start: 20px;
+  border: 1px solid var(--color-neutral-Grey);
+  border-radius: 8px;
+}
+#email::placeholder {
+  font-size: 14px;
+}
+.sign-up-buttom {
+  margin-block-start: 22px;
+  padding-block: 20px;
+  border: none;
+  background-color: var(--color-neutral-Blue-800);
+  color: var(--color-neutral-White);
+  font-weight: var(--fw-bold);
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
 }
