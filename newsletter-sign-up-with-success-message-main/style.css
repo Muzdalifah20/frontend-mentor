@@ -2,6 +2,7 @@
 
 :root {
   --color-primary-Red: hsl(4, 100%, 67%);
+  --color-primary-pink: hsl(347, 64%, 55%);
   --color-neutral-Blue-800: hsl(234, 29%, 20%);
   --color-neutral-Blue-700: hsl(235, 18%, 26%);
   --color-neutral-Grey: hsl(0, 0%, 58%);
@@ -31,8 +32,6 @@ body {
 }
 
 body {
-  width: 100%;
-  max-width: 375px;
   display: grid;
   place-items: center;
   min-height: 100vh;
@@ -53,6 +52,9 @@ h2,
 h3 {
 }
 
+p {
+  line-height: 1.5;
+}
 ul {
   list-style: none;
   padding: 0;
@@ -69,6 +71,8 @@ ul {
 }
 
 .sign-up-form {
+  width: 100%;
+  max-width: 375px;
   background-color: var(--color-neutral-White);
   display: grid;
   place-items: center;
@@ -143,6 +147,13 @@ label {
 #email::placeholder {
   font-size: 14px;
 }
+#email::placeholder:focus {
+  color: var(--color-neutral-Blue-800);
+}
+#email:focus,
+#email:hover {
+  border-color: var(--color-neutral-Blue-800);
+}
 .sign-up-buttom {
   margin-block-start: 22px;
   padding-block: 20px;
@@ -153,4 +164,36 @@ label {
   font-size: 14px;
   border-radius: 8px;
   cursor: pointer;
+  transition: background 250ms ease-in-out;
+}
+
+.sign-up-buttom:hover {
+  background: linear-gradient(
+    var(--color-primary-pink),
+    var(--color-primary-Red)
+  );
+}
+
+.successful-signup {
+  padding-block-start: 5rem;
+  padding-inline: 25px;
+  display: grid;
+  width: 375px;
+}
+.successful-signup h1 {
+  font-size: 2.6rem;
+  line-height: 1;
+  padding-block: 40px 24px;
+}
+
+.successful-signup p {
+  width: 39.32ch;
+  padding-block-end: 14rem;
+}
+
+.successful-signup button {
+  width: 100%;
+  align-self: flex-end;
+  justify-self: center;
+  bottom: 0;
 }
